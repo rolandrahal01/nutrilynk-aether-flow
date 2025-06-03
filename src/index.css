@@ -43,6 +43,12 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Custom NutriLynk colors */
+    --nutri-blue: 214 100% 50%;
+    --nutri-green: 142 76% 36%;
+    --nutri-cyan: 188 94% 43%;
+    --nutri-teal: 178 100% 29%;
   }
 
   .dark {
@@ -504,6 +510,83 @@
   }
   50% {
     transform: translateY(-5px);
+  }
+}
+
+@keyframes animate-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes animate-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Utility Classes */
+@layer utilities {
+  .animate-fade-in {
+    animation: animate-fade-in 0.6s ease-out;
+  }
+  
+  .animate-slide-up {
+    animation: animate-slide-up 0.8s ease-out;
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .text-nutri-blue {
+    color: hsl(var(--nutri-blue));
+  }
+  
+  .text-nutri-green {
+    color: hsl(var(--nutri-green));
+  }
+  
+  .text-nutri-cyan {
+    color: hsl(var(--nutri-cyan));
+  }
+  
+  .text-nutri-teal {
+    color: hsl(var(--nutri-teal));
+  }
+  
+  .bg-nutri-blue {
+    background-color: hsl(var(--nutri-blue));
+  }
+  
+  .bg-nutri-green {
+    background-color: hsl(var(--nutri-green));
+  }
+  
+  .bg-nutri-cyan {
+    background-color: hsl(var(--nutri-cyan));
+  }
+  
+  .bg-nutri-teal {
+    background-color: hsl(var(--nutri-teal));
+  }
+  
+  .border-nutri-blue {
+    border-color: hsl(var(--nutri-blue));
+  }
+  
+  .border-nutri-green {
+    border-color: hsl(var(--nutri-green));
   }
 }
 
